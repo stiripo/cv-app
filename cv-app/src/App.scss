@@ -1,20 +1,24 @@
-$main_font: 'Open Sans', sans-serif;
+$main_font: "Open Sans", sans-serif;
 $main_font_size: 14px;
 $green_color: #26c17e;
 
+body {
+    font-family: $main_font;
+    font-size: $main_font_size;
+    line-height: 21px;
+    padding: 20px;
+}
 
 .info-box {
-    font-family: $main_font;
+    & h2 {
+        margin-bottom: 40px;
+        color: $green_color;
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
 
-     & h2 {
-         margin-bottom: 40px;
-         color: $green_color;
-         font-size: 25px;
-         font-weight: 700;
-     }
-
-     & div {
-        font-size: $main_font_size;
-        line-height: 21px;
-     }
+.info {
+    background: #eee;
+    padding: 15px;
 }
