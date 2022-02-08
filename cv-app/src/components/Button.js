@@ -1,7 +1,7 @@
 export function Button(props) {
     return (
         <div>
-            <button>{props.icon}{props.text}</button>
+            <button className='button'>{props.icon}{props.text}</button>
         </div>
     )
 }

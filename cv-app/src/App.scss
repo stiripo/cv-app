@@ -26,9 +26,26 @@ body {
     padding: 16px;
 }
 
+.button {
+    height: fit-content;
+    display: inline-block;
+    background-color: #222935;
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: $green_color;
+}
+
 .expertise-list {
-    padding-left: 40px;
-    margin: 0px 16px;
+    // padding-left: 40px;
+    // margin: 0px 16px;
 }
 
 .expertise-list li {
