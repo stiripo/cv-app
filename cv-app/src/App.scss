@@ -10,8 +10,11 @@ body {
 }
 
 .info-box {
+    margin: 0px 0px 50px;
+
     & h2 {
         margin-bottom: 40px;
+        margin-top: 20px;
         color: $green_color;
         font-size: 25px;
         font-weight: 700;
@@ -20,5 +23,32 @@ body {
 
 .info {
     background: #eee;
-    padding: 15px;
+    padding: 16px;
 }
+
+.expertise-list {
+    padding-left: 40px;
+    margin: 0px 16px;
+}
+
+.expertise-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.expertise-list-date {
+    width: 160px;
+    margin-right: 20px;
+}
+
+.expertise-list h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.expertise-list p {
+    font-size: $main_font_size;
+}
+

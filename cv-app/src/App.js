@@ -4,6 +4,8 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { Box } from './components/Box';
 import { Button } from './components/Button';
 import { Info } from './components/Info';
+import { Expertise, jobs } from './components/Expertise';
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
 
     <Button icon={<FontAwesomeIcon icon={faChevronLeft} />} text="Go back" />
     <Info text='Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.' />
+    <Expertise data={jobs} />
     </>
   );
 }
