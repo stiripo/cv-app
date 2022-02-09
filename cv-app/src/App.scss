@@ -69,3 +69,16 @@ body {
     font-size: $main_font_size;
 }
 
+.feedback-reporter {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.feedback-photo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
