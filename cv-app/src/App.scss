@@ -82,3 +82,24 @@ body {
     border-radius: 50%;
 }
 
+.nav {
+    font-size: 16px;
+    font-weight: 600;
+    color: #667081;
+}
+
+.nav li {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.nav li:hover {
+    color: $green_color;
+}
+
+.nav-icon {
+    margin-right: 20px;
+}
+

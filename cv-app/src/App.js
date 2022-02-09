@@ -7,6 +7,7 @@ import { Info } from './components/Info';
 import { Expertise } from './components/Expertise';
 import { Feedback } from './components/Feedback';
 import { feedback_data, expertise_data } from './utils/constants';
+import { Navigation } from './components/Navigation';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         title='Feedback'
         content={<Feedback data={feedback_data} />}
       />
+      <Navigation />
     </>
   );
 }
