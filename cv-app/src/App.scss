@@ -150,3 +150,12 @@ body {
     font-weight: 700;
     line-height: 120%;
 }
+
+@media (max-width: 600px) {
+.nav {
+    width: 54px;
+}
+    .nav a {
+        display: none;
+    }
+}
