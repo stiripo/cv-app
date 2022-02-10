@@ -1,6 +1,7 @@
 $main_font: "Open Sans", sans-serif;
 $main_font_size: 14px;
 $green_color: #26c17e;
+$dark-gray: #222935;
 
 body {
     font-family: $main_font;
@@ -29,7 +30,7 @@ body {
 .button {
     height: fit-content;
     display: inline-block;
-    background-color: #222935;
+    background-color: $dark-gray;
     border-radius: 5px;
     border: 0px;
     padding: 10px 20px;
@@ -86,6 +87,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: #667081;
+    width: 250px;
 }
 
 .nav li {
@@ -93,6 +95,7 @@ body {
     align-items: center;
     padding: 20px;
     cursor: pointer;
+    background-color: $dark-gray;
 }
 
 .nav li:hover {
@@ -103,3 +106,47 @@ body {
     margin-right: 20px;
 }
 
+.photoBox {
+    width: 500px;
+    text-align: center;
+}
+
+.photoBox-photo {
+    margin-bottom: 10px;
+}
+
+.photoBox-photo img {
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.photoBox-name {
+    margin-bottom: 10px;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.photoBox-title {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.photoBox-description {
+    line-height: 150%;
+}
+
+.photoBox--small {
+    width: 250px;
+    text-align: center;
+
+}
+
+.photoBox-name--small {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 120%;
+}
