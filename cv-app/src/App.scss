@@ -84,6 +84,7 @@ body {
 }
 
 .nav {
+    margin-top: 30px;
     font-size: 16px;
     font-weight: 600;
     color: #667081;
@@ -108,6 +109,7 @@ body {
 
 .photoBox {
     width: 500px;
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -140,7 +142,9 @@ body {
 
 .photoBox--small {
     width: 250px;
+    padding-top: 20px;
     text-align: center;
+    color: white;
 
 }
 
@@ -151,6 +155,15 @@ body {
     line-height: 120%;
 }
 
+.panel {
+    width: 250px;
+    height: 2600px;
+    background-color: $dark-gray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 600px) {
 .nav {
     width: 54px;
@@ -158,4 +171,8 @@ body {
     .nav a {
         display: none;
     }
+}
+
+.empty {
+    flex-grow: 1;
 }

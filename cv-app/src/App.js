@@ -9,6 +9,7 @@ import { Feedback } from './components/Feedback';
 import { feedback_data, expertise_data } from './utils/constants';
 import { Navigation } from './components/Navigation';
 import { PhotoBox } from './components/PhotoBox';
+import { Panel } from './components/Panel';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       />
       <Navigation />
       <PhotoBox name="John Doe" title="Programmer. Creative. Innovator" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque" avatar="http://avatars0.githubusercontent.com/u/246180?v=4" />
+      <Panel />
     </>
   );
 }
