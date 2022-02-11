@@ -2,21 +2,26 @@ import { Navigation } from "./Navigation";
 import { PhotoBox } from "./PhotoBox";
 import { Button } from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';;
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 
 export function Panel(props) {
     return (
-        <div className='panel'>
+        <div className='panel slide-out-panel'>
+            <div className='hamburger-menu'>
+                {<FontAwesomeIcon className='hamburger-icon' icon={faBars} />}
+            </div>
+
             <div>
                 {<PhotoBox size='small' name="John Doe" avatar="http://avatars0.githubusercontent.com/u/246180?v=4" />}
-                </div>
+            </div>
             <div>
                 {<Navigation />}
             </div>
             <div className='empty'></div>
             <div>
-                {<Button icon={<FontAwesomeIcon icon={faChevronLeft} />} text="Go back"/>}
+                {<Button icon={<FontAwesomeIcon icon={faChevronLeft} />} text="Go back" />}
             </div>
         </div>
     )
