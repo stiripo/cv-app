@@ -11,6 +11,7 @@ import { Navigation } from './components/Navigation';
 import { PhotoBox } from './components/PhotoBox';
 import { Panel } from './components/Panel';
 import { Timeline } from './components/Timeline';
+import { Address } from './components/Address';
 
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
       <PhotoBox name="John Doe" title="Programmer. Creative. Innovator" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque" avatar="http://avatars0.githubusercontent.com/u/246180?v=4" />
       <Panel />
       <Box title='Education' content={<Timeline data={timeline_data} />} />
+      <Box title='Contacts' content={<Address />} />
+      
     </>
   );
 }

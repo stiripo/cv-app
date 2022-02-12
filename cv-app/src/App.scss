@@ -248,6 +248,27 @@ body {
     font-weight: bold;
 }
 
+.contact-details {
+    font-size: 16px;
+}
+
+.contact-details strong {
+    font-weight: bold;
+}
+
+.contact-details dl {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.contact-details dt {
+    width: 40px;
+    color: $green_color;
+    font-size: 26px;
+    padding-right: 10px;
+}
+
+
 @media (max-width: 600px) {
     .nav {
         width: 54px;
