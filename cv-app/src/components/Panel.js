@@ -4,11 +4,12 @@ import { Button } from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 
 export function Panel(props) {
     return (
-        <div className='panel slide-out-panel'>
+        <div className='panel'>
             <div className='hamburger-menu'>
                 {<FontAwesomeIcon className='hamburger-icon' icon={faBars} />}
             </div>
@@ -21,7 +22,7 @@ export function Panel(props) {
             </div>
             <div className='empty'></div>
             <div>
-                {<Button icon={<FontAwesomeIcon icon={faChevronLeft} />} text="Go back" />}
+                <Link to={props.backToRoute}><Button icon={<FontAwesomeIcon icon={faChevronLeft} />} text="Go back" /></Link>
             </div>
         </div>
     )

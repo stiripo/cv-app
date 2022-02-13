@@ -12,32 +12,33 @@ import { PhotoBox } from './components/PhotoBox';
 import { Panel } from './components/Panel';
 import { Timeline } from './components/Timeline';
 import { Address } from './components/Address';
+import { About } from './pages/Inner/About';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  Router
+} from "react-router-dom";
+import { Home } from './pages/Home/home';
 
 
 function App() {
   return (
-    <>
-      <Box
-        title='About me'
-        content='Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque' />
-      <Button icon={<FontAwesomeIcon icon={faChevronLeft} />} text="Go back" />
-      <Button text='Learn more' />
-      <Info text='Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.' />
-      <Box
-        title='Expertise'
-        content={<Expertise data={expertise_data} />} />
-      <Box
-        title='Feedback'
-        content={<Feedback data={feedback_data} />}
-      />
-      <Navigation />
-      <PhotoBox name="John Doe" title="Programmer. Creative. Innovator" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque" avatar="http://avatars0.githubusercontent.com/u/246180?v=4" />
-      <Panel />
-      <Box title='Education' content={<Timeline data={timeline_data} />} />
-      <Box title='Contacts' content={<Address />} />
-      
-    </>
+    <Switch>
+      <Route exact path='/'>
+       <Home />
+      </Route>
+      <Route path='/about'>
+        <About />
+      </Route>
+    </Switch>
+
   );
 }
 
 export default App;
+
+// css modules
+// html tags (sections, figure, dl, h1...)
+// unique keys for listitems
