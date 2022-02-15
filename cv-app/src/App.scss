@@ -14,7 +14,7 @@ body {
 
     & h2 {
         margin-bottom: 40px;
-        margin-top: 20px;
+        padding-top: 20px;
         color: $green_color;
         font-size: 25px;
         font-weight: 700;
@@ -46,11 +46,6 @@ body {
 
 .button:hover {
     background-color: $green_color;
-}
-
-.expertise-list {
-    // padding-left: 40px;
-    // margin: 0px 16px;
 }
 
 .expertise-list li {
@@ -97,7 +92,7 @@ body {
     width: 250px;
 }
 
-.nav li {
+.nav-link {
     display: flex;
     align-items: center;
     padding: 20px;
@@ -311,11 +306,12 @@ html {
 }
 
 
+
 @media (max-width: 600px) {
     .nav {
         width: 54px;
     }
-    .nav a {
+    .nav-section {
         display: none;
     }
 
