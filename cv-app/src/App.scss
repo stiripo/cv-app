@@ -75,6 +75,8 @@ body {
 }
 
 .feedback-reporter {
+    margin-top: 15px;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -169,7 +171,7 @@ body {
 
 .hamburger-menu {
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 100%;
     color: white;
     background-color: $dark-gray;
@@ -177,12 +179,10 @@ body {
     height: 20px;
     padding: 5px;
     border-radius: 0% 25% 25% 0%;
-    vertical-align: center;
+    font-size: 17px;
+    text-align: center;
 }
 
-.hamburger-icon {
-    font-size: 17px;
-}
 
 .side-menu {
     position: fixed;
@@ -191,7 +191,9 @@ body {
 }
 
 .main-content {
+    position: relative;
     margin-left: 250px;
+    margin-right: 10px;
     padding-left: 30px;
 }
 
@@ -202,6 +204,20 @@ body {
     text-align: center;
     max-height: 720px;
 }
+
+.back-to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    color: white;
+    background-color: #222935;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius:25% 25% 0% 0%;
+    text-align: center;
+}
+
 
 #root {
     height: 100%;
@@ -215,10 +231,8 @@ html {
 .home-page {
     max-width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba($color: #000614, $alpha: 0.7), rgba($color: #000614, $alpha: 0.7)), url("../public/home_background.png") no-repeat center/cover;
-}
-
-.background-img {
+    background: linear-gradient(to top, rgba($color: #000614, $alpha: 0.7), rgba($color: #000614, $alpha: 0.7)),
+        url("../public/home_background.png") no-repeat center/cover;
 }
 
 .empty {
@@ -296,11 +310,44 @@ html {
     padding-right: 10px;
 }
 
+
 @media (max-width: 600px) {
     .nav {
         width: 54px;
     }
     .nav a {
         display: none;
+    }
+
+    .photoBox--small {
+        width: 60px;
+    }
+
+    .photoBox--small img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .photoBox-name--small {
+        display: none;
+    }
+
+    .panel {
+        width: 60px;
+    }
+
+    .panel .button {
+        margin: 0;
+        padding: 1px;
+        font-size: 14px;
+    }
+
+    .main-content {
+        margin-left: 65px;
+        margin-right: 5px;
+    }
+
+    .panel .button-text {
+    display: none;
     }
 }

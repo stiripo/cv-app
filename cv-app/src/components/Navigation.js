@@ -28,7 +28,7 @@ export function Navigation() {
                 </li>
                 <li>
                     <FontAwesomeIcon className='nav-icon' icon={faLocationArrow} />
-                    <a href='#'>Contact</a>
+                    <a href='#'>Contacts</a>
                 </li>
                 <li>
                     <FontAwesomeIcon className='nav-icon' icon={faComment} />

@@ -11,7 +11,7 @@ export function Panel(props) {
     return (
         <div className='panel'>
             <div className='hamburger-menu'>
-                {<FontAwesomeIcon className='hamburger-icon' icon={faBars} />}
+                {<FontAwesomeIcon icon={faBars} />}
             </div>
 
             <div>

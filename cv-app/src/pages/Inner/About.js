@@ -8,6 +8,8 @@ import { Address } from "../../components/Address";
 import { Feedback } from "../../components/Feedback";
 import { feedback_data } from "../../utils/constants";
 import '../../App.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 export function About() {
     return (
@@ -28,6 +30,9 @@ export function About() {
                     title='Feedback'
                     content={<Feedback data={feedback_data} />}
                 />
+                <div className='back-to-top'>
+                    {<FontAwesomeIcon icon={faChevronUp} />}
+                </div>
             </div>
         </div>
     )

@@ -42,3 +42,8 @@ export default App;
 // css modules
 // html tags (sections, figure, dl, h1...)
 // unique keys for listitems
+// navigate through panel
+// scroll bar
+// portfolio component
+
+
