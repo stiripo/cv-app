@@ -1,7 +1,7 @@
-import styles from './Timeline.module.scss';
+import styles from './EducationTimeline.module.scss';
 import infoStyles from '../Info/Info.module.scss';
 
-export function Timeline(props) {
+export function EducationTimeline(props) {
     const data = props.data;
     const listitems = data.map((entry) =>
         <li>

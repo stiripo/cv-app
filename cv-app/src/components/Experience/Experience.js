@@ -1,10 +1,10 @@
-import styles from './Expertise.module.scss';
+import styles from './Experience.module.scss';
 
-export function Expertise(props) {
+export function Experience(props) {
     const data = props.data;
     const listitems = data.map((entry) =>
         <li key={entry.date}>
-            <div className={styles.expertise_list_date}>
+            <div className={styles.date}>
                 <h3>{entry.info.company}</h3>
                 <div>{entry.date}</div>
             </div>
@@ -16,7 +16,7 @@ export function Expertise(props) {
     )
     return (
         <div>
-            <ul className={styles.expertise_list}>
+            <ul className={styles.experience_list}>
                 {listitems}
             </ul>
         </div>

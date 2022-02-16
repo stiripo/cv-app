@@ -17,7 +17,7 @@ export const feedback_data = [
     }
 ];
 
-export const expertise_data = [
+export const experience_data = [
     {
         date: '2013-2014',
         info: {
@@ -36,7 +36,7 @@ export const expertise_data = [
     }
 ];
 
-export const timeline_data = [
+export const education_data = [
     {
         "date": 2001,
         "title": "Title 0",

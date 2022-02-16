@@ -3,20 +3,20 @@
 
 .contact_details {
     font-size: 16px;
+
+    & li{
+        display: flex;
+        padding-bottom: 20px;
+        gap: 10px;
+    }
 }
 
 .contact_details strong {
     font-weight: bold;
 }
 
-.contact_details dl {
-    display: flex;
-    padding-bottom: 20px;
-}
-
-.contact_details dt {
+.icon {
     width: 40px;
     color: $green_color;
     font-size: 26px;
-    padding-right: 10px;
 }

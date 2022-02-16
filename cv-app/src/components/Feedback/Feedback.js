@@ -8,8 +8,8 @@ export function Feedback(props) {
         <li>
             <blockquote>
                 <Info text={feedback.feedback} />
-                <div className={styles.feedback_reporter}>
-                    <img className={styles.feedback_photo} src={feedback.reporter.photoUrl} alt="Reporter"/>
+                <div className={styles.reporter}>
+                    <img className={styles.photo} src={feedback.reporter.photoUrl} alt="Reporter"/>
                     <cite>{`${feedback.reporter.name}, `}
                     <a href={feedback.reporter.citeUrl}>{getDomainFromUrl(feedback.reporter.citeUrl)}</a>
                     </cite>

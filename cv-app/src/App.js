@@ -5,7 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import { Home } from './pages/Home/home';
 
 
-function App() {
+export function App() {
   return (
     <Switch>
       <Route exact path='/'>
@@ -19,9 +19,7 @@ function App() {
   );
 }
 
-export default App;
 
-// css modules
 // html tags (sections, figure, dl, h1...)
 // unique keys for listitems
 // scroll bar
