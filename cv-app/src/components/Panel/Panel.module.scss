@@ -1,0 +1,47 @@
+@import '../../assets/styles/global_variables.scss';
+
+
+.panel {
+    position: relative;
+    width: 250px;
+    height: 100%;
+    background-color: $dark-gray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger_menu {
+    position: absolute;
+    top: 60px;
+    left: 100%;
+    color: $white_color;
+    background-color: $dark-gray;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 0% 25% 25% 0%;
+    font-size: 17px;
+    text-align: center;
+}
+
+.empty {
+    flex-grow: 5;
+}
+
+@media (max-width: 600px) {
+    .panel {
+        width: 60px;
+    }
+
+    .panel .button {
+        margin: 0;
+        padding: 1px;
+        font-size: 14px;
+    }
+
+    .panel .button :nth-child(2) {
+        display: none;
+        }
+}
+

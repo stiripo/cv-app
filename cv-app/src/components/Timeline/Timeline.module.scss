@@ -1,0 +1,53 @@
+@import '../../assets/styles/global_variables.scss';
+
+
+.timeline li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.timeline {
+    position: relative;
+    padding-right: 10px;
+    min-height: 30vh;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.description {
+    position: relative;
+}
+
+.description::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid $light-gray;
+}
+
+.timeline::before {
+    width: 5px;
+    content: "";
+    background-color: $green_color;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 4px;
+    margin-left: 22px;
+}
+
+.date {
+    position: relative;
+    padding: 15px;
+    margin-right: 10px;
+    background-color: $white_color;
+    font-size: 16px;
+    font-weight: bold;
+}

@@ -1,11 +1,14 @@
+import styles from './Timeline.module.scss';
+import infoStyles from '../Info/Info.module.scss';
+
 export function Timeline(props) {
     const data = props.data;
     const listitems = data.map((entry) =>
         <li>
-            <div className='timeline-date'>
+            <div className={styles.date}>
                 {entry.date}
             </div>
-            <div className='timeline-description info'>
+            <div className={`${styles.description} ${infoStyles.info}`}>
                 <h3>
                     {entry.title}
                 </h3>
@@ -16,7 +19,7 @@ export function Timeline(props) {
         </li>
     )
     return (
-        <ul className='timeline'>
+        <ul className={styles.timeline}>
             {listitems}
         </ul>
     )

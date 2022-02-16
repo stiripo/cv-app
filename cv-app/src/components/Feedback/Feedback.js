@@ -1,5 +1,6 @@
-import { getDomainFromUrl } from "../utils/helper _functions";
-import { Info } from "./Info";
+import { getDomainFromUrl } from "../../utils/helper _functions";
+import { Info } from "../Info/Info";
+import styles from './Feedback.module.scss';
 
 export function Feedback(props) {
     const data = props.data;
@@ -7,8 +8,8 @@ export function Feedback(props) {
         <li>
             <blockquote>
                 <Info text={feedback.feedback} />
-                <div className='feedback-reporter'>
-                    <img className='feedback-photo' src={feedback.reporter.photoUrl} alt="Reporter"/>
+                <div className={styles.feedback_reporter}>
+                    <img className={styles.feedback_photo} src={feedback.reporter.photoUrl} alt="Reporter"/>
                     <cite>{`${feedback.reporter.name}, `}
                     <a href={feedback.reporter.citeUrl}>{getDomainFromUrl(feedback.reporter.citeUrl)}</a>
                     </cite>

@@ -1,0 +1,35 @@
+@import '../../assets/styles/global_variables.scss';
+
+
+.nav {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $gray_nav_text;
+    width: 250px;
+}
+
+.nav_link {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    background-color: $dark-gray;
+}
+
+.nav li:hover {
+    color: $green_color;
+}
+
+.nav_icon {
+    margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+    .nav {
+        width: 54px;
+    }
+    .nav_section {
+        display: none;
+    }
+}

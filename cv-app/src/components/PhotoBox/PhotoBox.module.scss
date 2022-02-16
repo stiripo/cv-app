@@ -1,0 +1,63 @@
+@import '../../assets/styles/global_variables.scss';
+
+
+.photoBox {
+    color: $white_color;
+}
+
+.photo {
+    margin-bottom: 10px;
+}
+
+.photo img {
+    border-radius: 50%;
+    border: 1px solid $white_color;
+}
+
+.name {
+    margin-bottom: 10px;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.title {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.description {
+    line-height: 150%;
+}
+
+
+.small {
+    width: 250px;
+    padding-top: 20px;
+    text-align: center;
+    color: $white_color;
+}
+
+.name_small {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+@media (max-width: 600px) {
+    .small {
+        width: 60px;
+    }
+
+    .small img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .name_small {
+        display: none;
+    }
+}

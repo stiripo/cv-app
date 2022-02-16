@@ -1,8 +1,10 @@
+import styles from './Expertise.module.scss';
+
 export function Expertise(props) {
     const data = props.data;
     const listitems = data.map((entry) =>
         <li key={entry.date}>
-            <div className='expertise-list-date'>
+            <div className={styles.expertise_list_date}>
                 <h3>{entry.info.company}</h3>
                 <div>{entry.date}</div>
             </div>
@@ -14,7 +16,7 @@ export function Expertise(props) {
     )
     return (
         <div>
-            <ul className='expertise-list'>
+            <ul className={styles.expertise_list}>
                 {listitems}
             </ul>
         </div>

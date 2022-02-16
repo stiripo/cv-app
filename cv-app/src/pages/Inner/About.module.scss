@@ -1,0 +1,36 @@
+
+@import '../../assets/styles/global_variables.scss';
+
+
+.side_menu {
+    position: fixed;
+    top: 0px;
+    height: 100%;
+}
+
+.main_content {
+    position: relative;
+    margin-left: 250px;
+    margin-right: 10px;
+    padding-left: 30px;
+}
+
+.back_to_top {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    color: $white_color;
+    background-color: $dark-gray;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius:25% 25% 0% 0%;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .main_content {
+        margin-left: 65px;
+        margin-right: 5px;
+    }
+}

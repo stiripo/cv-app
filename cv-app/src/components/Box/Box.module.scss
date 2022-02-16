@@ -1,0 +1,14 @@
+@import '../../assets/styles/global_variables.scss';
+
+
+.info_box {
+    margin: 0px 0px 50px;
+
+    & h2 {
+        margin-bottom: 40px;
+        padding-top: 20px;
+        color: $green_color;
+        font-size: 25px;
+        font-weight: 700;
+    }
+}

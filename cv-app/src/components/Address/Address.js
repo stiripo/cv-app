@@ -2,10 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter, faSkype } from '@fortawesome/free-brands-svg-icons';
+import styles from './Address.module.scss';
 
 export function Address() {
     return (
-        <address className='contact-details'>
+        <address className={styles.contact_details}>
             <dl>
                 <dt><FontAwesomeIcon icon={faPhone} /></dt>
                 <dd>

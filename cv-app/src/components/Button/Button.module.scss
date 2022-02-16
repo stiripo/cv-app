@@ -1,0 +1,24 @@
+@import '../../assets/styles/global_variables.scss';
+
+.button {
+    height: fit-content;
+    display: inline-block;
+    background-color: $dark-gray;
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px 20px;
+    margin: 10px;
+    color: $white_color;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: $green_color;
+}
+
+.button_text {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+

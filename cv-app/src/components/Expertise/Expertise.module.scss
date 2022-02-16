@@ -1,0 +1,23 @@
+@import '../../assets/styles/global_variables.scss';
+
+
+.expertise_list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.expertise_list_date {
+    width: 160px;
+    margin-right: 20px;
+}
+
+.expertise_list h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.expertise_list p {
+    font-size: $main_font_size;
+}
