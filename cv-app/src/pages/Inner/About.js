@@ -15,9 +15,9 @@ import styles from './About.module.scss';
 
 export function About() {
     return (
-        <div className={styles.about_page}>
+        <div className={styles.wrapper}>
             <div className={styles.side_menu}>
-                <Panel backToRoute='/'/>
+                <Panel backToRoute='/' />
             </div>
             <div className={styles.main_content}>
                 <Box
@@ -30,8 +30,7 @@ export function About() {
                 <Box title='Contacts' content={<Contacts />} />
                 <Box
                     title='Feedback'
-                    content={<Feedback data={feedback_data} />}
-                />
+                    content={<Feedback data={feedback_data} />} />
                 <Link className={styles.back_to_top} to='About me' spy={true} smooth={true} duration={1000}>
                     {<FontAwesomeIcon icon={faChevronUp} />}
                 </Link>

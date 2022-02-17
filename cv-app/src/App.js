@@ -20,10 +20,11 @@ export function App() {
 }
 
 
-// html tags (sections, figure, dl, h1...)
-// unique keys for listitems
+
 // scroll bar
 // portfolio component
 //intersection observer
+// nav panel slide out
+
 
 

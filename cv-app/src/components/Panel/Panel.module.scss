@@ -9,6 +9,11 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    transition: margin-left 1s ease-out;
+}
+
+.hidden {
+    margin-left: -250px;
 }
 
 .hamburger_menu {
