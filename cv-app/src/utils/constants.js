@@ -11,7 +11,7 @@ export const feedback_data = [
         feedback: ' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor',
         reporter: {
             photoUrl: './user.jpg',
-            name: 'John Doe',
+            name: 'Clint Eastwood',
             citeUrl: 'https://www.citeexample.com'
         }
     }

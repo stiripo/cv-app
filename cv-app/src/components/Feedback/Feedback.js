@@ -5,7 +5,7 @@ import styles from './Feedback.module.scss';
 export function Feedback(props) {
     const data = props.data;
     const listitems = data.map((feedback) =>
-        <li>
+        <li key={feedback.reporter.name}>
             <blockquote>
                 <Info text={feedback.feedback} />
                 <div className={styles.reporter}>

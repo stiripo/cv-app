@@ -4,7 +4,7 @@ import infoStyles from '../Info/Info.module.scss';
 export function EducationTimeline(props) {
     const data = props.data;
     const listitems = data.map((entry) =>
-        <li>
+        <li key={`${entry.date}_${entry.title}`}>
             <div className={styles.date}>
                 {entry.date}
             </div>
