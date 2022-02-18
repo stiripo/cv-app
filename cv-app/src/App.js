@@ -22,9 +22,8 @@ export function App() {
 
 
 // scroll bar
-// portfolio component
 //intersection observer
-// nav panel slide out
+
 
 
 

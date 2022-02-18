@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 import styles from './About.module.scss';
+import { Portfolio } from "../../components/Portfolio/Portfolio";
 
 export function About() {
     return (
@@ -27,6 +28,7 @@ export function About() {
                 <Box
                     title='Experience'
                     content={<Experience data={experience_data} />} />
+                <Box title='Portfolio' content={<Portfolio />} />
                 <Box title='Contacts' content={<Contacts />} />
                 <Box
                     title='Feedback'
