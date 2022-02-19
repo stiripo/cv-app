@@ -1,8 +1,6 @@
-import './App.scss';
-
-import { About } from './pages/Inner/About';
 import { Switch, Route } from "react-router-dom";
 import { Home } from './pages/Home/home';
+import { About } from './pages/Inner/About';
 
 
 export function App() {
@@ -21,7 +19,6 @@ export function App() {
 
 
 
-// scroll bar
 //intersection observer
 
 

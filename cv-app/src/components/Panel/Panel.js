@@ -8,20 +8,16 @@ import { Link } from "react-router-dom";
 import styles from './Panel.module.scss';
 import React, { useState } from "react";
 
-
-
-
 export function Panel(props) {
+    const [isVisible, setIsVisible] = useState(true);
 
-    const [view, setView] = useState('full');
-
-   const togglePanelView = () => {
-    view === 'full' ? setView('hidden') : setView('full');
+    const togglePanelisVisible = () => {
+        isVisible  ? setIsVisible(false) : setIsVisible(true);
     }
 
     return (
-        <div className={view === 'full' ? styles.panel : `${styles.panel} ${styles.hidden}`}>
-            <div className={styles.hamburger_menu} onClick={togglePanelView}>
+        <div className={isVisible ? styles.panel : `${styles.panel} ${styles.hidden}`}>
+            <div className={styles.hamburger_menu} onClick={togglePanelisVisible}>
                 {<FontAwesomeIcon icon={faBars} />}
             </div>
 
@@ -33,7 +29,7 @@ export function Panel(props) {
             </div>
             <div className={styles.empty}></div>
             <div>
-                <Link to={props.backToRoute}><Button icon={<FontAwesomeIcon icon={faChevronLeft} />} className={styles.button}  text="Go back" /></Link>
+                <Link to={props.backToRoute}><Button icon={<FontAwesomeIcon icon={faChevronLeft} />} size='mini' text="Go back" /></Link>
             </div>
         </div>
     )

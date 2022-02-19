@@ -1,18 +1,17 @@
 @import '../../assets/styles/global_variables.scss';
 
-
-.timeline li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
 .timeline {
     position: relative;
     padding-right: 10px;
     min-height: 30vh;
     max-height: 80vh;
     overflow: auto;
+
+    & li{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
 }
 
 .description {

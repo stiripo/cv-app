@@ -1,6 +1,5 @@
 import styles from './Portfolio.module.scss';
-import overlay_styles from '../PortfolioInfo/PortfolioInfo.module.scss';
-import { useEffect, useState } from 'react';
+import { useState, useLayoutEffect } from 'react';
 import Isotope from 'isotope-layout';
 import { PortfolioInfo } from '../PortfolioInfo/PortfolioInfo';
 import card_1 from '../../assets/images/card_1.png';
@@ -11,7 +10,7 @@ export function Portfolio() {
     const [isotope, setIsotope] = useState(null);
     const [filterKey, setFilterKey] = useState('*');
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         setIsotope(
             new Isotope(`.${styles.filter_container}`, {
                 itemSelector: `.${styles.filter_item}`,
@@ -20,7 +19,7 @@ export function Portfolio() {
         )
     }, []);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (isotope) {
             filterKey === '*' ? isotope.arrange({ filter: `*` }) : isotope.arrange({ filter: `.${filterKey}` })
         }

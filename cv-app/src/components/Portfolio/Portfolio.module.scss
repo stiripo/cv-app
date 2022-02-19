@@ -21,10 +21,10 @@
 
 .filter_item:hover .overlay {
     height: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: $transparent_white;
     border-width: 1px;
     border-style: solid;
-    border-color: rgb(221, 221, 221);
+    border-color: $off-white;
 }
 
 .tabs {
@@ -37,13 +37,12 @@
     position: absolute;
     top: 0;
     left: 70%;
-    content: "  /";
+    content: '  /';
 }
 
 .tabs li:last-child::after {
     content: '';
 }
-
 
 .tabs li {
     position: relative;

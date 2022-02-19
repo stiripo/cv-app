@@ -1,6 +1,5 @@
 @import '../../assets/styles/global_variables.scss';
 
-
 .panel {
     position: relative;
     width: 250px;
@@ -37,16 +36,6 @@
 @media (max-width: 600px) {
     .panel {
         width: 60px;
-    }
-
-    .panel .button {
-        margin: 0;
-        padding: 1px;
-        font-size: 14px;
-    }
-
-    .panel .button :nth-child(2) {
-        display: none;
-        }
+    } 
 }
 

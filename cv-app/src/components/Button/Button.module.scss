@@ -1,4 +1,4 @@
-@import '../../assets/styles/global_variables.scss';
+@import "../../assets/styles/global_variables.scss";
 
 .button {
     height: fit-content;
@@ -22,3 +22,14 @@
     padding-right: 10px;
 }
 
+@media (max-width: 600px) {
+    .mini {
+        margin: 0;
+        padding: 1px;
+        font-size: 14px;
+    }
+
+    .mini :nth-child(2) {
+        display: none;
+    }
+}
