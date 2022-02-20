@@ -3,9 +3,16 @@ import { Button } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import '../../App.scss';
 import styles from './home.module.scss';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 
 export function Home() {
+// const dispatch = useDispatch();
+//     useEffect(() => {
+//         console.log('TEST');
+//         dispatch(testPassed('Success!'));
+//     }, []);
     return (
         <div className={styles.home_page}>
             <div className={styles.center_block}>
