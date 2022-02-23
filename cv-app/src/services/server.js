@@ -2,6 +2,7 @@ import { createServer } from "miragejs";
 
 createServer({
     routes() {
+
         this.get("/api/educations", () => {
             return [
                 {
@@ -34,6 +35,8 @@ createServer({
                 range: 30,
             }
         })
+
+        this.passthrough();
     }
 }
 )

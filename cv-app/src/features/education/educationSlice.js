@@ -7,7 +7,7 @@ const initialState = {
 }
 
 export const fetchEducationData = createAsyncThunk('education/fetchStatus', async () => {
-    return await fetch('/api/edcations').then((response) => response.json());
+    return await fetch('/api/educations').then((response) => response.json());
 })
 
 const educationSlice = createSlice({
@@ -26,6 +26,7 @@ const educationSlice = createSlice({
             .addCase(fetchEducationData.rejected, (state, action) => {
                 state.errorMessage = 'Something went wrong; please review your server connection!';
                 state.status = 'failed';
+
             })
     }
 })

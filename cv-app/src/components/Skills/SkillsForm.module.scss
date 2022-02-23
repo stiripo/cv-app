@@ -1,0 +1,110 @@
+@import "../../assets/styles/global_variables.scss";
+
+.wrapper {
+    position: relative;
+}
+
+.open_edit {
+    position: absolute;
+    top: -65px;
+    right: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    display: grid;
+    // display: none;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: repeat(3, 40px);
+    max-width: 50%;
+    row-gap: 20px;
+
+    & label {
+        align-self: center;
+    }
+
+    & input {
+        border: 1px solid $dark-gray;
+        border-radius: 5px;
+    }
+}
+
+.frame {
+    margin-bottom: 40px;
+    border: 1px solid $green_color;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: $dark-gray;
+    color: $white_color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.chart {
+    height: 30px;
+    max-width: 100%;
+    line-height: 30px;
+    background-color: $green_color;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    color: $white_color;
+}
+
+.scale {
+    font-size: 12px;
+    color: $gray_nav_text;
+}
+
+.scale {
+    // position: relative;
+    margin-top: 30px;
+    display: flex;
+    border-top: 1px solid $gray_nav_text;
+    justify-content: space-between;
+
+    & :first-child {
+        justify-self: start;
+    }
+
+    & :last-child {
+        justify-self: end;
+    }
+}
+
+.scale div {
+    position: relative;
+}
+
+.profficient::before, .expert::before {
+    position: absolute;
+    content: "|";
+    font-size: 8px;
+    font-weight: 700;
+    top: -16px;
+    left: 48%;
+}
+
+.beginner::after {
+    position: absolute;
+    content: "|";
+    font-size: 8px;
+    font-weight: 1000;
+    top: -16px;
+    left: -2px;
+}
+
+.master::after {
+    position: absolute;
+    content: "|";
+    font-size: 8px;
+    font-weight: 1000;
+    top: -16px;
+    right: -2px;
+}

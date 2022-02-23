@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 import styles from './About.module.scss';
+import { SkillsForm, SkillsWrapper } from "../../components/Skills/SkillsForm";
 
 
 export function About() {
@@ -28,6 +29,7 @@ export function About() {
                 <SectionContainer
                     title='Experience'
                     content={<Experience data={experience_data} />} />
+                <SectionContainer title='Skills' content={<SkillsWrapper />} />
                 <SectionContainer title='Portfolio' content={<Portfolio />} />
                 <SectionContainer title='Contacts' content={<Contacts />} />
                 <SectionContainer
