@@ -1,15 +1,30 @@
 import { useFormik } from 'formik';
 import { useState } from 'react';
 import styles from './SkillsForm.module.scss';
+import { addSkill, postSkillsData } from '../../features/skills/skillsSlice';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 export function SkillsForm() {
+
+    const dispatch = useDispatch();
+
     const formik = useFormik({
         initialValues: {
             skillName: '',
             skillRange: ''
         },
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2))
+            dispatch(addSkill({
+                name: values.skillName,
+                range: values.skillRange,
+            }));
+            // dispatch(postSkillsData(JSON.stringify(
+            //     {
+            //         name: values.skillName,
+            //         range: values.skillRange,
+            //     }
+            // )))
         },
     });
     return (
@@ -39,8 +54,18 @@ export function SkillsForm() {
 }
 
 export function SkillsChart() {
+    const skills = useSelector(state => state.skills);
+
+    if (skills.length > 0) {
+        const chart = skills.map((skill) =>
+            <div key={skill.name} className={styles.chart} style={{ maxWidth: `${skill.range}%` }}>{skill.name}</div>
+        );
+        return (
+            <div>{chart}</div>
+        )
+    }
     return (
-        <div className={styles.chart}>Skill name</div>
+        <div></div>
     )
 }
 
