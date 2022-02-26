@@ -19,12 +19,12 @@ export function SkillsForm() {
                 name: values.skillName,
                 range: values.skillRange,
             }));
-            // dispatch(postSkillsData(JSON.stringify(
-            //     {
-            //         name: values.skillName,
-            //         range: values.skillRange,
-            //     }
-            // )))
+            dispatch(postSkillsData(JSON.stringify(
+                {
+                    name: values.skillName,
+                    range: values.skillRange,
+                }
+            )))
         },
     });
     return (

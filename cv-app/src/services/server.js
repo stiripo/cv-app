@@ -29,12 +29,10 @@ createServer({
             { timing: 3000 }
         )
 
-        this.post("/api/skills", () => {
-            return {
-                name: "string",
-                range: 30,
-            }
-        })
+        this.post("/api/skills",  (schema, request) => {
+            let attrs = JSON.parse(request.requestBody)
+            console.log(attrs)
+          })
 
         this.passthrough();
     }
