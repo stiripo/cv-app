@@ -15,6 +15,7 @@
 }
 
 form {
+    position: relative;
     display: grid;
     // display: none;
     grid-template-columns: 1fr 2.5fr;
@@ -30,6 +31,10 @@ form {
         border: 1px solid $dark-gray;
         border-radius: 5px;
     }
+}
+
+.invalid {
+    border: 2px solid red;
 }
 
 .frame {
@@ -107,4 +112,25 @@ button {
     font-weight: 1000;
     top: -16px;
     right: -2px;
+}
+
+.skill_error {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    color: red;
+    font-size: 12px;
+}
+
+.range_error {
+    position: absolute;
+    top: 98px;
+    left: 0;
+    color: red;
+    font-size: 12px;
+}
+
+.submit_btn:disabled {
+    background-color: $disabled_gray;
+    color: black;
 }

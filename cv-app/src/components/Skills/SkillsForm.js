@@ -3,17 +3,17 @@ import { useState } from 'react';
 import styles from './SkillsForm.module.scss';
 import { addSkill, postSkillsData } from '../../features/skills/skillsSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { validate } from '../../services/validation';
 
 
 export function SkillsForm() {
-
     const dispatch = useDispatch();
-
     const formik = useFormik({
         initialValues: {
             skillName: '',
             skillRange: ''
         },
+        validate,
         onSubmit: values => {
             dispatch(addSkill({
                 name: values.skillName,
@@ -36,8 +36,11 @@ export function SkillsForm() {
                 type='text'
                 placeholder='Enter skill name'
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 value={formik.values.skillName}
+                className={formik.touched.skillName && formik.errors.skillName ? styles.invalid : ''}
             />
+            {formik.errors.skillName ? <div className={styles.skill_error}>{formik.errors.skillName}</div> : null}
             <label htmlFor='skillRange'>Skill range:</label>
             <input
                 id='skillRange'
@@ -45,10 +48,13 @@ export function SkillsForm() {
                 type='number'
                 placeholder='Enter skill range'
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 value={formik.values.skillRange}
+                className={formik.touched.skillRange && formik.errors.skillRange ? styles.invalid : ''}
             />
+            {formik.errors.skillRange ? <div className={styles.range_error}>{formik.errors.skillRange}</div> : null}
 
-            <button type='sumbit'>Add skill</button>
+            <button type='sumbit' disabled={Object.keys(formik.errors).length} className={styles.submit_btn}>Add skill</button>
         </form>
     )
 }
