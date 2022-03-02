@@ -2,6 +2,7 @@
 
 .wrapper {
     display: flex;
+    max-width: 100%;
 }
 
 .side_menu {
@@ -18,7 +19,7 @@
 
 .back_to_top {
     position: fixed;
-    right: 10px;
+    right: 45px;
     bottom: 0;
     color: $white_color;
     background-color: $dark-gray;
@@ -31,7 +32,7 @@
 
 @media (max-width: 600px) {
     .main_content {
-        margin-left: 5px;
         margin-right: 5px;
+        padding-left: 32px;
     }
 }

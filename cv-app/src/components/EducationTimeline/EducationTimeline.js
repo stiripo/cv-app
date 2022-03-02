@@ -11,7 +11,7 @@ export function EducationTimeline({ data }) {
     const dispatch = useDispatch();
     const { education } = useSelector(state => state.education);
     const { status } = useSelector(state => state.education);
-    const { errorMessage } = useSelector(state => education);
+    const { errorMessage } = useSelector(state => state.education);
 
     useEffect(() => {
         dispatch(fetchEducationData());
@@ -28,7 +28,7 @@ export function EducationTimeline({ data }) {
     if (status === 'failed') {
         return (
             <div className={styles.error}>
-                <p>Something went wrong</p>
+                <p>{errorMessage}</p>
             </div>
         )
     }

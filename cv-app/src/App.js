@@ -2,7 +2,6 @@ import { Switch, Route } from "react-router-dom";
 import { Home } from './pages/Home/home';
 import { About } from './pages/Inner/About';
 
-
 export function App() {
   return (
     <Switch>
@@ -16,11 +15,3 @@ export function App() {
 
   );
 }
-
-
-
-//intersection observer
-
-
-
-

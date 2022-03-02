@@ -2,6 +2,7 @@
 
 .wrapper {
     position: relative;
+    max-width: 100%;
 }
 
 .open_edit {
@@ -14,14 +15,17 @@
     display: none;
 }
 
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 40px 20px 40px 20px;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+
 form {
     position: relative;
-    display: grid;
-    // display: none;
-    grid-template-columns: 1fr 2.5fr;
-    grid-template-rows: repeat(3, 40px);
-    max-width: 50%;
-    row-gap: 20px;
+    max-width: 60%;
 
     & label {
         align-self: center;
@@ -31,6 +35,24 @@ form {
         border: 1px solid $dark-gray;
         border-radius: 5px;
     }
+}
+
+.error {
+    grid-column-end: span 2;
+    color: red;
+    font-size: 12px;
+}
+
+.submit_btn {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 0;
+    width: 105px;
+}
+
+.submit_btn:disabled {
+    background-color: $disabled_gray;
+    color: black;
 }
 
 .invalid {
@@ -44,18 +66,6 @@ form {
     border-radius: 5px;
 }
 
-// button {
-//     background-color: $dark-gray;
-//     color: $white_color;
-//     padding: 10px 20px;
-//     border: none;
-//     border-radius: 5px;
-// }
-
-// button:hover {
-//     background-color: $green_color;
-// }
-
 .chart {
     height: 30px;
     max-width: 100%;
@@ -67,16 +77,16 @@ form {
 }
 
 .scale {
-    font-size: 12px;
-    color: $gray_nav_text;
-}
-
-.scale {
-    // position: relative;
     margin-top: 30px;
     display: flex;
-    border-top: 1px solid $gray_nav_text;
+    font-size: 12px;
+    color: $pale_gray_text;
+    border-top: 1px solid $pale_gray_text;
     justify-content: space-between;
+
+    & div {
+        position: relative;
+    }
 
     & :first-child {
         justify-self: start;
@@ -87,11 +97,8 @@ form {
     }
 }
 
-.scale div {
-    position: relative;
-}
-
-.profficient::before, .expert::before {
+.profficient::before,
+.expert::before {
     position: absolute;
     content: "|";
     font-size: 8px;
@@ -118,23 +125,3 @@ form {
     right: -2px;
 }
 
-.skill_error {
-    position: absolute;
-    top: 38px;
-    left: 0;
-    color: red;
-    font-size: 12px;
-}
-
-.range_error {
-    position: absolute;
-    top: 98px;
-    left: 0;
-    color: red;
-    font-size: 12px;
-}
-
-.submit_btn:disabled {
-    background-color: $disabled_gray;
-    color: black;
-}

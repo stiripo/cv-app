@@ -4,14 +4,14 @@
     margin-top: 30px;
     font-size: 16px;
     font-weight: 600;
-    color: $gray_nav_text;
+    color: $pale_gray_text;
     width: 250px;
 }
 
 .nav_link {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 20px 15px;
     cursor: pointer;
     background-color: $dark-gray;
 }
@@ -22,11 +22,12 @@
 
 .nav_icon {
     margin-right: 20px;
+    flex-basis: 45px;
 }
 
 @media (max-width: 600px) {
     .nav {
-        width: 54px;
+        width: 50px;
     }
     .nav_section {
         display: none;

@@ -36,6 +36,9 @@
 @media (max-width: 600px) {
     .panel {
         width: 60px;
-    } 
-}
+    }
 
+    .hidden {
+        margin-left: -55px;
+    }
+}

@@ -32,33 +32,37 @@ export function SkillsForm() {
     });
     return (
         <form onSubmit={formik.handleSubmit} className={styles.form}>
-            <label htmlFor='skillName'>Skill name:</label>
-            <input
-                id='skillName'
-                name='skillName'
-                type='text'
-                placeholder='Enter skill name'
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.skillName}
-                className={formik.touched.skillName && formik.errors.skillName ? styles.invalid : ''}
-            />
-            {formik.errors.skillName ? <div className={styles.skill_error}>{formik.errors.skillName}</div> : null}
-            <label htmlFor='skillRange'>Skill range:</label>
-            <input
-                id='skillRange'
-                name='skillRange'
-                type='number'
-                placeholder='Enter skill range'
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.skillRange}
-                className={formik.touched.skillRange && formik.errors.skillRange ? styles.invalid : ''}
-            />
-            {formik.errors.skillRange ? <div className={styles.range_error}>{formik.errors.skillRange}</div> : null}
-
-            <Button text='Add skill' disabled={Object.keys(formik.errors).length} className={styles.submit_btn} />
-            {/* <button type='sumbit' disabled={Object.keys(formik.errors).length} className={styles.submit_btn}>Add skill</button> */}
+            <div className={styles.grid_container}>
+                <label htmlFor='skillName'>Skill name:</label>
+                <input
+                    id='skillName'
+                    name='skillName'
+                    type='text'
+                    placeholder='Enter skill name'
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.skillName}
+                    className={formik.touched.skillName && formik.errors.skillName ? styles.invalid : ''}
+                />
+                <div className={styles.error}>
+                    {formik.errors.skillName ? formik.errors.skillName : ''}
+                </div>
+                <label htmlFor='skillRange'>Skill range:</label>
+                <input
+                    id='skillRange'
+                    name='skillRange'
+                    type='number'
+                    placeholder='Enter skill range'
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.skillRange}
+                    className={formik.touched.skillRange && formik.errors.skillRange ? styles.invalid : ''}
+                />
+                <div className={styles.error}>
+                    {formik.errors.skillRange ? formik.errors.skillRange : ''}
+                </div>
+            </div>
+            <Button text='Add skill' disabled={Object.keys(formik.errors).length || formik.values === formik.initialValues} className={styles.submit_btn} />
         </form>
     )
 }

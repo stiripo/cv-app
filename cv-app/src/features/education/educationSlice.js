@@ -26,7 +26,6 @@ const educationSlice = createSlice({
             .addCase(fetchEducationData.rejected, (state, action) => {
                 state.errorMessage = 'Something went wrong; please review your server connection!';
                 state.status = 'failed';
-
             })
     }
 })
