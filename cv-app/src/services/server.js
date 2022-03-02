@@ -21,18 +21,28 @@ createServer({
         )
 
         this.get("/api/skills", () => {
-            return [{
-                name: 'string;',
-                range: 20,
-            }]
+            return [
+                {
+                    name: 'JavaScript',
+                    range: 70,
+                },
+                {
+                    name: 'React',
+                    range: '70'
+                },
+                {
+                    name: 'CSS',
+                    range: '80'
+                }
+            ]
         },
             { timing: 3000 }
         )
 
-        this.post("/api/skills",  (schema, request) => {
+        this.post("/api/skills", (schema, request) => {
             let attrs = JSON.parse(request.requestBody)
             console.log(attrs)
-          })
+        })
 
         this.passthrough();
     }

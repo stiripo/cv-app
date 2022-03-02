@@ -10,3 +10,5 @@ export const store = configureStore({
     },
      middleware: [skillsMiddleware, thunk],
 })
+
+store.dispatch({type: 'APP_INIT'})

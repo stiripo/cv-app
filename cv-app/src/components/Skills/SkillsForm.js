@@ -4,7 +4,9 @@ import styles from './SkillsForm.module.scss';
 import { addSkill, postSkillsData } from '../../features/skills/skillsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { validate } from '../../services/validation';
-
+import { Button } from '../Button/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenSquare } from '@fortawesome/free-solid-svg-icons';
 
 export function SkillsForm() {
     const dispatch = useDispatch();
@@ -14,7 +16,7 @@ export function SkillsForm() {
             skillRange: ''
         },
         validate,
-        onSubmit: values => {
+        onSubmit: (values, action) => {
             dispatch(addSkill({
                 name: values.skillName,
                 range: values.skillRange,
@@ -24,7 +26,8 @@ export function SkillsForm() {
                     name: values.skillName,
                     range: values.skillRange,
                 }
-            )))
+            )));
+            formik.resetForm()
         },
     });
     return (
@@ -54,7 +57,8 @@ export function SkillsForm() {
             />
             {formik.errors.skillRange ? <div className={styles.range_error}>{formik.errors.skillRange}</div> : null}
 
-            <button type='sumbit' disabled={Object.keys(formik.errors).length} className={styles.submit_btn}>Add skill</button>
+            <Button text='Add skill' disabled={Object.keys(formik.errors).length} className={styles.submit_btn} />
+            {/* <button type='sumbit' disabled={Object.keys(formik.errors).length} className={styles.submit_btn}>Add skill</button> */}
         </form>
     )
 }
@@ -81,7 +85,7 @@ export function SkillsWrapper() {
 
     return (
         <div className={styles.wrapper}>
-            <button className={styles.open_edit} onClick={openEdit}>Open edit</button>
+            <Button icon={<FontAwesomeIcon icon={faPenSquare} />} text='Open edit' className={styles.open_edit} onClick={openEdit} />
             <div className={hidden ? styles.hidden : styles.frame}>
                 <SkillsForm />
             </div>

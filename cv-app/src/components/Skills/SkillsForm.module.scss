@@ -44,13 +44,17 @@ form {
     border-radius: 5px;
 }
 
-button {
-    background-color: $dark-gray;
-    color: $white_color;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-}
+// button {
+//     background-color: $dark-gray;
+//     color: $white_color;
+//     padding: 10px 20px;
+//     border: none;
+//     border-radius: 5px;
+// }
+
+// button:hover {
+//     background-color: $green_color;
+// }
 
 .chart {
     height: 30px;
