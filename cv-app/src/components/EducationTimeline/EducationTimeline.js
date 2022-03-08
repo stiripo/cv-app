@@ -6,7 +6,7 @@ import { fetchEducationData } from '../../features/education/educationSlice';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 
-export function EducationTimeline({ data }) {
+export function EducationTimeline() {
 
     const dispatch = useDispatch();
     const { education } = useSelector(state => state.education);
@@ -32,11 +32,10 @@ export function EducationTimeline({ data }) {
             </div>
         )
     }
-
     return (
         <ul className={styles.timeline}>
-            {data.map((entry) =>
-                <li key={`${entry.date}_${entry.title}`}>
+            {education.map((entry) =>
+                <li key={`${entry.date}_${entry.title}`} data-testid='education_list'>
                     <div className={styles.date}>
                         {entry.date}
                     </div>

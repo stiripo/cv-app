@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { useDispatch } from 'react-redux';
 
 const initialState = [];
 
@@ -16,19 +15,9 @@ const skillSlice = createSlice({
     },
     extraReducers: builder => {
         builder
-            // .addCase(fetchSkillsData.pending, (state, action) => {
-            //     // state.status = 'loading'
-            // })
             .addCase(fetchSkillsData.fulfilled, (state, action) => {
-
                 return action.payload;
-                // state.status = 'idle'
             })
-            // .addCase(fetchEducationData.rejected, (state, action) => {
-            //     state.errorMessage = 'Something went wrong; please review your server connection!';
-            //     state.status = 'failed';
-
-            // })
     }
 });
 
@@ -44,12 +33,6 @@ export const postSkillsData = createAsyncThunk('skills/sendSkills', async (paylo
 export const fetchSkillsData = createAsyncThunk('skills/fetchStatus', async () => {
     return await fetch('/api/skills')
     .then((response) => response.json())
-    
-    
-    // .then((data) => {
-    //     const dispatch = useDispatch();
-    //     dispatch(updateStatefromStorage(data))
-    // });
 })
 
 export const skillsMiddleware = storeAPI => next => action => {

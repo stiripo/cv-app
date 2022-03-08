@@ -72,7 +72,7 @@ export function SkillsChart() {
 
     if (skills.length > 0) {
         const chart = skills.map((skill) =>
-            <div key={skill.name} className={styles.chart} style={{ maxWidth: `${skill.range}%` }}>{skill.name}</div>
+            <div key={skill.name} data-testid='skill_bar' className={styles.chart} style={{ maxWidth: `${skill.range}%` }}>{skill.name}</div>
         );
         return (
             <div>{chart}</div>
